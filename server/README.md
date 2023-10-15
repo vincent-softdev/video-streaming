@@ -2,6 +2,9 @@
 
 - Backend: Python, FastAPI, Python-Multipart
 
+Technologies
+- Streaming
+
 # How to run
 
 ## `Docker`
