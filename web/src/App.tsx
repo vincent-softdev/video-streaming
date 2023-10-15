@@ -1,9 +1,11 @@
 import './App.css';
+import PageHeader from './layouts/PageHeader';
 
 function App() {
   return (
-    <div className="bg-blue-500 text-white p-5">
-      Hello, this is a React app with TypeScript and Tailwind!
+    <div className='max-h-screen flex flex-col'>
+      <PageHeader />
+      <div>2</div>
     </div>
   );
 }
