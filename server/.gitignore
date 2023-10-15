@@ -1,0 +1,5 @@
+# Some GitHub setting
+
+__pycache__/
+video_streaming_venv/
+*.mp4
