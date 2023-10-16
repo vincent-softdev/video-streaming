@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import FileInput from '../components/FileInput';
 import VideoPlayer from '../components/VideoPlayer';
 import ThumbnailPreview from '../components/ThumbnailPreview';
+import PageHeader from '../layouts/PageHeader';
 
 const UploadVideoPage = () => {
     const [videoFile, setVideoFile] = useState<File | null>(null);
@@ -57,26 +58,29 @@ const UploadVideoPage = () => {
     };
 
     return (
-        <div className="flex flex-col items-center justify-center h-screen">
-            <h1 className="mb-4 text-xl">Upload Video</h1>
-            <VideoPlayer src={videoFile ? URL.createObjectURL(videoFile) : null} />
-            <FileInput accept="video/*" onChange={handleVideoChange} />
-            <input
-                type="text"
-                placeholder="Enter video title"
-                value={title}
-                onChange={(e) => setTitle(e.target.value)}
-                className="mb-4 p-2 border rounded w-64"
-            />
-            <ThumbnailPreview src={thumbnailFile ? URL.createObjectURL(thumbnailFile) : null} />
-            <FileInput accept="image/*" onChange={handleThumbnailChange} />
-            
-            {loading && <p>Uploading...</p>}
-            {success && <p className="text-green-500">Upload successful!</p>}
+        <div className="pt-4 h-screen w-full">
+            <PageHeader state='upload' className='w-full' onSearch={() => {}} showSearch={false} />
+            <div className='flex p-4 flex-col items-center justify-center'>
+                <h1 className="mb-4 text-xl">Upload Video</h1>
+                <VideoPlayer src={videoFile ? URL.createObjectURL(videoFile) : null} />
+                <FileInput accept="video/*" onChange={handleVideoChange} />
+                <input
+                    type="text"
+                    placeholder="Enter video title"
+                    value={title}
+                    onChange={(e) => setTitle(e.target.value)}
+                    className="mb-4 p-2 border rounded w-64"
+                />
+                <ThumbnailPreview src={thumbnailFile ? URL.createObjectURL(thumbnailFile) : null} />
+                <FileInput accept="image/*" onChange={handleThumbnailChange} />
+                
+                {loading && <p>Uploading...</p>}
+                {success && <p className="text-green-500">Upload successful!</p>}
 
-            <button className="p-2 bg-blue-500 text-white rounded mt-4" onClick={handleSubmit} disabled={loading}>
-                Uploading
-            </button>
+                <button className="p-2 bg-blue-500 text-white rounded mt-4" onClick={handleSubmit} disabled={loading}>
+                    Uploading
+                </button>
+            </div>
         </div>
     );
 }
