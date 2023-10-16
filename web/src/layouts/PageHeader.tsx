@@ -47,9 +47,11 @@ const PageHeader = (props: PageHeaderProps) => {
                 <CButton onClick={() => setShowFullSearch(true)} size="icon" variant="ghost" className='md:hidden'>
                     <SearchIcon />
                 </CButton>
-                <CButton size="icon" variant="ghost">
-                    <DriveFolderUploadIcon />
-                </CButton>
+                <a href="/upload">
+                    <CButton size="icon" variant="ghost">
+                        <DriveFolderUploadIcon />
+                    </CButton>
+                </a>
             </div>
         </div>
     )
