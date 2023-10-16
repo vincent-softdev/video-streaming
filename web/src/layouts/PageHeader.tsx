@@ -6,8 +6,19 @@ import SearchIcon from '@mui/icons-material/Search';
 import { useState } from 'react';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
-const PageHeader = () => {
+interface PageHeaderProps {
+    onSearch: (query: string) => void;
+}
+
+const PageHeader = (props: PageHeaderProps) => {
     const [showFullSearch, setShowFullSearch] = useState<boolean>(false)
+    const [searchValue, setSearchValue] = useState<string>('');
+
+    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const value = e.target.value;
+        setSearchValue(value);
+        props.onSearch(value);
+      };
 
     return (
         <div className="flex gap-10 lg:gap-20 justify-between pt-2 mb-6 mx-4">
@@ -26,7 +37,7 @@ const PageHeader = () => {
                     </CButton>
                 )}
                 <div className='flex flex-grow max-w-[600px]'>
-                    <input type='search' placeholder='Search' className='rounded-l-full border border-secondary-border shadow-inner shadow-secondary py-1 px-4 text-lg w-full focus:border-blue-500 outline-none'/>
+                    <input type='search' value={searchValue} onChange={handleInputChange} placeholder='Search' className='rounded-l-full border border-secondary-border shadow-inner shadow-secondary py-1 px-4 text-lg w-full focus:border-blue-500 outline-none'/>
                     <CButton className='py-2 px-4 rounded-r-full border-secondary-border border border-l-0 flex-shrink-0'>
                         <SearchIcon />
                     </CButton>
