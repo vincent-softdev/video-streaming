@@ -1,19 +1,45 @@
+import CButton from '../components/CButton';
 import LogoAndText from '../components/LogoAndText';
 import MenuIcon from '@mui/icons-material/Menu';
+import DriveFolderUploadIcon from '@mui/icons-material/DriveFolderUpload';
+import SearchIcon from '@mui/icons-material/Search';
+import { useState } from 'react';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 const PageHeader = () => {
+    const [showFullSearch, setShowFullSearch] = useState<boolean>(false)
+
     return (
-        <div className="flex gap-10 lg:gap-20 justify-between">
-            <div className="flex gap-4 items-center flex-shrink-0">
-                <button>
+        <div className="flex gap-10 lg:gap-20 justify-between pt-2 mb-6 mx-4">
+            <div className={`gap-4 items-center flex-shrink-0 ${showFullSearch ? "hidden": "flex"}`}>
+                <CButton>
                     <MenuIcon />
-                </button>
+                </CButton>
                 <a href="/">
                     <LogoAndText className='gap-2' text='Davin Videos'/>
                 </a>
             </div>
-            <div></div>
-            <div></div>
+            <form className={`gap-4 flex-grow justify-center ${showFullSearch ? "flex": "hidden md:flex"}`}>
+                {showFullSearch && (
+                    <CButton onClick={() => setShowFullSearch(false)} type='button' variant="ghost" size="icon" className='flex-shrink-0'>
+                        <ArrowBackIcon />
+                    </CButton>
+                )}
+                <div className='flex flex-grow max-w-[600px]'>
+                    <input type='search' placeholder='Search' className='rounded-l-full border border-secondary-border shadow-inner shadow-secondary py-1 px-4 text-lg w-full focus:border-blue-500 outline-none'/>
+                    <CButton className='py-2 px-4 rounded-r-full border-secondary-border border border-l-0 flex-shrink-0'>
+                        <SearchIcon />
+                    </CButton>
+                </div>
+            </form>
+            <div className={`flex-shrink-0 md:gap-2 ${showFullSearch ? "hidden": "flex"}`}>
+                <CButton onClick={() => setShowFullSearch(true)} size="icon" variant="ghost" className='md:hidden'>
+                    <SearchIcon />
+                </CButton>
+                <CButton size="icon" variant="ghost">
+                    <DriveFolderUploadIcon />
+                </CButton>
+            </div>
         </div>
     )
 }
