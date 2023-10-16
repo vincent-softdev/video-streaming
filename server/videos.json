@@ -1,0 +1,14 @@
+{
+    "id": "e1e4cead-8fe1-4c17-ade9-21034e695c10",
+    "title": "string",
+    "channel": {
+        "id": "string",
+        "name": "string",
+        "profileUrl": "string"
+    },
+    "views": 0,
+    "postedAt": "string",
+    "duration": 0,
+    "thumbnailUrl": "string",
+    "videoUrl": "string"
+}
