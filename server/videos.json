@@ -1,14 +1,30 @@
-{
-    "id": "e1e4cead-8fe1-4c17-ade9-21034e695c10",
-    "title": "string",
-    "channel": {
-        "id": "string",
-        "name": "string",
-        "profileUrl": "string"
+[
+    {
+        "id": "65fa501d-bc7b-4354-859c-7b6e0a438c1f",
+        "title": "string",
+        "channel": {
+            "id": "string",
+            "name": "string",
+            "profileUrl": "string"
+        },
+        "views": 0,
+        "postedAt": "string",
+        "duration": 0,
+        "thumbnailUrl": "string",
+        "videoUrl": "string"
     },
-    "views": 0,
-    "postedAt": "string",
-    "duration": 0,
-    "thumbnailUrl": "string",
-    "videoUrl": "string"
-}
+    {
+        "id": "d7411df1-b77c-4571-940f-bdfb2fd9cc96",
+        "title": "string",
+        "channel": {
+            "id": "string",
+            "name": "string",
+            "profileUrl": "string"
+        },
+        "views": 0,
+        "postedAt": "string",
+        "duration": 0,
+        "thumbnailUrl": "string",
+        "videoUrl": "string"
+    }
+]

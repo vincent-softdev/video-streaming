@@ -9,7 +9,10 @@ class VideoService:
 
     def create_and_save_video(self, video_data):
         print(video_data)
-        channel = Channel(video_data['channel_id'], video_data['channel_name'], video_data['channel_profileUrl'])
+        
+        channel_var = video_data['channel']
+        print(channel_var)
+        channel = Channel(channel_var['id'], channel_var['name'], channel_var['profileUrl'])
         video = Video(
             title=video_data['title'],
             channel=channel.to_dict(),
@@ -25,3 +28,6 @@ class VideoService:
 
     def get_all_videos(self):
         return self.repo.get_all()
+
+    def get_video_by_id(self, video_id: str) -> Video:
+        return self.repo.get_by_id(video_id)

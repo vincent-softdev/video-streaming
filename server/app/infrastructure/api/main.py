@@ -4,11 +4,14 @@ import os
 from app.application.video_service import VideoService
 from pydantic import BaseModel, Json
 
+class ChannelModel(BaseModel):
+    id: str
+    name: str
+    profileUrl: str
+
 class VideoCreate(BaseModel):
     title: str
-    channel_id: str
-    channel_name: str
-    channel_profileUrl: str
+    channel: ChannelModel
     views: int
     postedAt: str
     duration: int
@@ -40,8 +43,6 @@ async def upload_video(
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error processing video data: {e}")
 
-
-
 @app.get("/videos/")
 async def get_all_videos():
     try:
@@ -50,3 +51,15 @@ async def get_all_videos():
         return [video.__dict__ for video in videos]
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error retrieving videos: {e}")
+    
+@app.get("/videos/{video_id}")
+async def get_video_by_id(video_id: str):
+    try:
+        service = VideoService()
+        video = service.get_video_by_id(video_id)
+        if video:
+            return video.__dict__
+        else:
+            raise HTTPException(status_code=404, detail="Video not found")
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error retrieving video: {e}")
