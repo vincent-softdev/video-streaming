@@ -34,21 +34,49 @@ const UploadVideoPage = () => {
     const handleSubmit = async () => {
         setLoading(true);
 
-        await new Promise(resolve => setTimeout(resolve, 3000));
+        const formDataVideo = new FormData();
+        const formDataDetail = new FormData();
+        const newVideo = {
+            "title": title,
+            "channel": {
+              "name": "Web Dev Simplified",
+              "id": "WebDevSimplified",
+              "profileUrl":
+                "https://yt3.ggpht.com/ytc/APkrFKZWeMCsx4Q9e_Hm6nhOOUQ3fv96QGUXiMr1-pPP=s48-c-k-c0x00ffffff-no-rj"
+            },
+            "views": 0,
+            "postedAt": "2023-08-22",
+            "duration": 0,
+            "thumbnailUrl": "https://i.ytimg.com/vi/d6a8RymS1zI/maxresdefault.jpg",
+            "videoUrl": videoFile?.name
+          }
 
-        const formData = new FormData();
-        if (videoFile) formData.append('video', videoFile);
-        if (thumbnailFile) formData.append('thumbnail', thumbnailFile);
-        formData.append('title', title);
+        if (videoFile) formDataVideo.append('file', videoFile);
+
+        const response = await fetch('http://localhost:8000/upload/video', { // You might need to adjust the URL depending on your setup
+            method: 'POST',
+            body: formDataVideo
+        });
+
+        if(response.status != 200){
+            setSuccess(false)
+            setLoading(false);
+            return
+        }
+        
+        if (thumbnailFile) formDataDetail.append('video_data', JSON.stringify(newVideo));
+        // formData.append('title', title);
+        console.log(newVideo)
 
         try {
-            const response = await fetch('/videos/upload', {
+            const response = await fetch('http://localhost:8000/upload/', { // You might need to adjust the URL depending on your setup
                 method: 'POST',
-                body: formData
+                body: formDataDetail
             });
 
             if (response.ok) {
                 setSuccess(true);
+                setTitle('');
             } else {
                 // Handle error
                 console.error('Error uploading video:', await response.text());

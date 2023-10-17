@@ -35,23 +35,27 @@ VIDEO_DIRECTORY = "./videos_storage"
 
 @app.post("/upload/")
 async def upload_video(
-    video_data: Annotated[Json[VideoCreate], Form()],
-    file: UploadFile = File(...)
+    video_data: Annotated[Json[VideoCreate], Form()]
 ):
-    print(video_data)
-    try:
-        filepath = os.path.join(VIDEO_DIRECTORY, file.filename)
-        with open(filepath, "wb+") as buffer:
-            buffer.write(file.file.read())
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Error uploading file: {e}")
-
     try:
         service = VideoService()
         video = service.create_and_save_video(video_data.dict())
         return video.__dict__
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error processing video data: {e}")
+    
+@app.post("/upload/video")
+async def upload_video(
+    file: UploadFile = File(...)
+):
+    try:
+        filepath = os.path.join(VIDEO_DIRECTORY, file.filename)
+        with open(filepath, "wb+") as buffer:
+            buffer.write(file.file.read())
+
+        return {"video_name": file.filename}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error uploading file: {e}")
 
 @app.get("/videos/")
 async def get_all_videos():

@@ -10,7 +10,7 @@ const HomePage = () => {
     const [videoData, setVideoData] = useState<Video[]>([]);
     const [searchResults, setSearchResults] = useState<Video[]>([]);
     const [selectedCategory, setSelectedCategory] = useState(categories[0]);
-    const [selectedVideoId, setSelectedVideoId] = useState<string | null>(null);
+    const [selectedVideoUrl, setSelectedVideoUrl] = useState<string | null>(null);
 
     useEffect(() => {
         fetch('http://localhost:8000/videos/')
@@ -24,14 +24,13 @@ const HomePage = () => {
 
     const handleSearch = useCallback((query: string) => {
         const results = videoData.filter(video =>
-        video.title.toLowerCase().includes(query.toLowerCase())
+            video.title.toLowerCase().includes(query.toLowerCase())
         );
         setSearchResults(results);
-    }, []);
+    }, [videoData]);
 
-    const handleVideoClick = (videoId: string) => {
-        console.log(videoId)
-        setSelectedVideoId(videoId);
+    const handleVideoClick = (videoUrl: string) => {
+        setSelectedVideoUrl(videoUrl);
     };
 
     return (
@@ -48,11 +47,11 @@ const HomePage = () => {
                     />
                     </div>
                     {
-                        selectedVideoId && (
-                            <WatchVideo id={selectedVideoId} />
+                        selectedVideoUrl && (
+                            <WatchVideo url={selectedVideoUrl} />
                         )
                     }
-                    <div className={`grid gap-4 grid-cols-[repeat(auto-fill,minmax(300px,1fr))] ${selectedVideoId && 'mt-[100px]'}`}>
+                    <div className={`grid gap-4 grid-cols-[repeat(auto-fill,minmax(300px,1fr))] ${selectedVideoUrl && 'mt-[100px]'}`}>
                         {searchResults.map(video => (
                             <div key={video.id} className="cursor-pointer" onClick={() => handleVideoClick(video.videoUrl)}>
                                 <VideoGridItem video={video} />

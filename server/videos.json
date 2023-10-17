@@ -11,7 +11,7 @@
         "postedAt": "2023-08-29",
         "duration": 0,
         "thumbnailUrl": "string",
-        "videoUrl": "http://localhost:8000/videos/watch/30Aug_1253_back.mp4"
+        "videoUrl": "30Aug_1253_back.mp4"
     },
     {
         "id": "d7411df1-b77c-4571-940f-bdfb2fd9cc96",
@@ -25,134 +25,174 @@
         "postedAt": "2023-08-29",
         "duration": 0,
         "thumbnailUrl": "string",
-        "videoUrl": "http://localhost:8000/videos/watch/30Aug_1253_front.mp4"
+        "videoUrl": "30Aug_1253_front.mp4"
     },
     {
         "id": "1",
         "title": "CSS Anchor Is The Best New CSS Feature Since Flexbox",
         "channel": {
-          "name": "Web Dev Simplified",
-          "id": "WebDevSimplified",
-          "profileUrl":
-            "https://yt3.ggpht.com/ytc/APkrFKZWeMCsx4Q9e_Hm6nhOOUQ3fv96QGUXiMr1-pPP=s48-c-k-c0x00ffffff-no-rj"
+            "name": "Web Dev Simplified",
+            "id": "WebDevSimplified",
+            "profileUrl": "https://yt3.ggpht.com/ytc/APkrFKZWeMCsx4Q9e_Hm6nhOOUQ3fv96QGUXiMr1-pPP=s48-c-k-c0x00ffffff-no-rj"
         },
         "views": 222536,
         "postedAt": "2023-08-29",
         "duration": 938,
         "thumbnailUrl": "https://i.ytimg.com/vi/B4Y9Ed4lLAI/maxresdefault.jpg",
-        "videoUrl":
-          "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4"
-      },
-      {
+        "videoUrl": "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4"
+    },
+    {
         "id": "2",
         "title": "NEW Way To Create Variables In JavaScript",
         "channel": {
-          "name": "Web Dev Simplified",
-          "id": "WebDevSimplified",
-          "profileUrl":
-            "https://yt3.ggpht.com/ytc/APkrFKZWeMCsx4Q9e_Hm6nhOOUQ3fv96QGUXiMr1-pPP=s48-c-k-c0x00ffffff-no-rj"
+            "name": "Web Dev Simplified",
+            "id": "WebDevSimplified",
+            "profileUrl": "https://yt3.ggpht.com/ytc/APkrFKZWeMCsx4Q9e_Hm6nhOOUQ3fv96QGUXiMr1-pPP=s48-c-k-c0x00ffffff-no-rj"
         },
         "views": 257136,
         "postedAt": "2023-08-22",
         "duration": 732,
         "thumbnailUrl": "https://i.ytimg.com/vi/d6a8RymS1zI/maxresdefault.jpg",
-        "videoUrl":
-          "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4"
-      },
-      {
+        "videoUrl": "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4"
+    },
+    {
         "id": "3",
         "title": "Front-end developer takes on a CSS battle",
         "channel": {
-          "name": "Kevin Powell",
-          "id": "KevinPowell",
-          "profileUrl":
-            "https://yt3.ggpht.com/ytc/APkrFKa6XiLa13mMVPzkmmTBcgNPjjqCGPrY86KfJFmf5w=s48-c-k-c0x00ffffff-no-rj"
+            "name": "Kevin Powell",
+            "id": "KevinPowell",
+            "profileUrl": "https://yt3.ggpht.com/ytc/APkrFKa6XiLa13mMVPzkmmTBcgNPjjqCGPrY86KfJFmf5w=s48-c-k-c0x00ffffff-no-rj"
         },
         "views": 1232300,
         "postedAt": "2023-10-05",
         "duration": 120,
         "thumbnailUrl": "https://i.ytimg.com/vi/eYPyIq5Y3Rk/maxresdefault.jpg",
-        "videoUrl":
-          "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4"
-      },
-      {
+        "videoUrl": "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4"
+    },
+    {
         "id": "4",
         "title": "Quick guide to CSS focus states",
         "channel": {
-          "name": "Kevin Powell",
-          "id": "KevinPowell",
-          "profileUrl":
-            "https://yt3.ggpht.com/ytc/APkrFKa6XiLa13mMVPzkmmTBcgNPjjqCGPrY86KfJFmf5w=s48-c-k-c0x00ffffff-no-rj"
+            "name": "Kevin Powell",
+            "id": "KevinPowell",
+            "profileUrl": "https://yt3.ggpht.com/ytc/APkrFKa6XiLa13mMVPzkmmTBcgNPjjqCGPrY86KfJFmf5w=s48-c-k-c0x00ffffff-no-rj"
         },
         "views": 112,
         "postedAt": "2023-9-19",
         "duration": 4343,
         "thumbnailUrl": "https://i.ytimg.com/vi/apdD69J4bEc/maxresdefault.jpg",
-        "videoUrl":
-          "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4"
-      },
-      {
+        "videoUrl": "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4"
+    },
+    {
         "id": "5",
         "title": "I Cannot Believe React Made A Hook For This",
         "channel": {
-          "name": "Web Dev Simplified",
-          "id": "WebDevSimplified",
-          "profileUrl":
-            "https://yt3.ggpht.com/ytc/APkrFKZWeMCsx4Q9e_Hm6nhOOUQ3fv96QGUXiMr1-pPP=s48-c-k-c0x00ffffff-no-rj"
+            "name": "Web Dev Simplified",
+            "id": "WebDevSimplified",
+            "profileUrl": "https://yt3.ggpht.com/ytc/APkrFKZWeMCsx4Q9e_Hm6nhOOUQ3fv96QGUXiMr1-pPP=s48-c-k-c0x00ffffff-no-rj"
         },
         "views": 42345,
         "postedAt": "2023-03-02",
         "duration": 1000,
         "thumbnailUrl": "https://i.ytimg.com/vi/M3mGY0pgFk0/maxresdefault.jpg",
-        "videoUrl":
-          "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4"
-      },
-      {
+        "videoUrl": "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4"
+    },
+    {
         "id": "6",
         "title": "I Got Laid Off...",
         "channel": {
-          "name": "Caleb Curry",
-          "id": "CalebCurry",
-          "profileUrl":
-            "https://yt3.googleusercontent.com/ytc/APkrFKbpSojje_-tkBQecNtFuPdSCrg3ZT0FhaYjln9k0g=s176-c-k-c0x00ffffff-no-rj"
+            "name": "Caleb Curry",
+            "id": "CalebCurry",
+            "profileUrl": "https://yt3.googleusercontent.com/ytc/APkrFKbpSojje_-tkBQecNtFuPdSCrg3ZT0FhaYjln9k0g=s176-c-k-c0x00ffffff-no-rj"
         },
         "views": 10340,
         "postedAt": "2023-03-03",
         "duration": 54,
         "thumbnailUrl": "https://i.ytimg.com/vi/i2JVQdLnkAY/maxresdefault.jpg",
-        "videoUrl":
-          "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4"
-      },
-      {
+        "videoUrl": "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4"
+    },
+    {
         "id": "7",
         "title": "Tails OS in 100 Seconds",
         "channel": {
-          "name": "Fireship",
-          "id": "Fireship",
-          "profileUrl":
-            "https://yt3.googleusercontent.com/ytc/APkrFKb--NH6RwAGHYsD3KfxX-SAgWgIHrjR5E4Jb5SDSQ=s176-c-k-c0x00ffffff-no-rj"
+            "name": "Fireship",
+            "id": "Fireship",
+            "profileUrl": "https://yt3.googleusercontent.com/ytc/APkrFKb--NH6RwAGHYsD3KfxX-SAgWgIHrjR5E4Jb5SDSQ=s176-c-k-c0x00ffffff-no-rj"
         },
         "views": 10323340,
         "postedAt": "2023-08-09",
         "duration": 100,
         "thumbnailUrl": "https://i.ytimg.com/vi/mVKAyw0xqxw/maxresdefault.jpg",
-        "videoUrl":
-          "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4"
-      },
-      {
+        "videoUrl": "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4"
+    },
+    {
         "id": "8",
         "title": "Zig in 100 Seconds",
         "channel": {
-          "name": "Fireship",
-          "id": "Fireship",
-          "profileUrl":
-            "https://yt3.googleusercontent.com/ytc/APkrFKb--NH6RwAGHYsD3KfxX-SAgWgIHrjR5E4Jb5SDSQ=s176-c-k-c0x00ffffff-no-rj"
+            "name": "Fireship",
+            "id": "Fireship",
+            "profileUrl": "https://yt3.googleusercontent.com/ytc/APkrFKb--NH6RwAGHYsD3KfxX-SAgWgIHrjR5E4Jb5SDSQ=s176-c-k-c0x00ffffff-no-rj"
         },
         "views": 20323340,
         "postedAt": "2023-09-09",
         "duration": 105,
         "thumbnailUrl": "https://i.ytimg.com/vi/kxT8-C1vmd4/maxresdefault.jpg",
-        "videoUrl":
-          "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4"
-      }
+        "videoUrl": "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4"
+    },
+    {
+        "id": "0440fe25-a051-4979-95c6-282802ad84fc",
+        "title": "NEW Way To Create Variables In JavaScript",
+        "channel": {
+            "id": "WebDevSimplified",
+            "name": "Web Dev Simplified",
+            "profileUrl": "https://yt3.ggpht.com/ytc/APkrFKZWeMCsx4Q9e_Hm6nhOOUQ3fv96QGUXiMr1-pPP=s48-c-k-c0x00ffffff-no-rj"
+        },
+        "views": 257136,
+        "postedAt": "2023-08-22",
+        "duration": 732,
+        "thumbnailUrl": "https://i.ytimg.com/vi/d6a8RymS1zI/maxresdefault.jpg",
+        "videoUrl": "https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4"
+    },
+    {
+        "id": "c4a339d3-a90e-4e63-8227-539f0c532cb7",
+        "title": "NEW Way To Create Variables In JavaScript",
+        "channel": {
+            "id": "WebDevSimplified",
+            "name": "Web Dev Simplified",
+            "profileUrl": "https://yt3.ggpht.com/ytc/APkrFKZWeMCsx4Q9e_Hm6nhOOUQ3fv96QGUXiMr1-pPP=s48-c-k-c0x00ffffff-no-rj"
+        },
+        "views": 257136,
+        "postedAt": "2023-08-22",
+        "duration": 732,
+        "thumbnailUrl": "https://i.ytimg.com/vi/d6a8RymS1zI/maxresdefault.jpg",
+        "videoUrl": "30Aug_1253_back.mp4"
+    },
+    {
+        "id": "2ceb4bd3-f312-498a-811c-23ac8cd64fc4",
+        "title": "",
+        "channel": {
+            "id": "WebDevSimplified",
+            "name": "Web Dev Simplified",
+            "profileUrl": "https://yt3.ggpht.com/ytc/APkrFKZWeMCsx4Q9e_Hm6nhOOUQ3fv96QGUXiMr1-pPP=s48-c-k-c0x00ffffff-no-rj"
+        },
+        "views": 0,
+        "postedAt": "2023-08-22",
+        "duration": 0,
+        "thumbnailUrl": "https://i.ytimg.com/vi/d6a8RymS1zI/maxresdefault.jpg",
+        "videoUrl": "TheVinhLy.mp4"
+    },
+    {
+        "id": "954f9bf9-0d37-4472-a82f-1ad358c19c4d",
+        "title": "This is the new video",
+        "channel": {
+            "id": "WebDevSimplified",
+            "name": "Web Dev Simplified",
+            "profileUrl": "https://yt3.ggpht.com/ytc/APkrFKZWeMCsx4Q9e_Hm6nhOOUQ3fv96QGUXiMr1-pPP=s48-c-k-c0x00ffffff-no-rj"
+        },
+        "views": 0,
+        "postedAt": "2023-08-22",
+        "duration": 0,
+        "thumbnailUrl": "https://i.ytimg.com/vi/d6a8RymS1zI/maxresdefault.jpg",
+        "videoUrl": "demo_interview.mp4"
+    }
 ]
