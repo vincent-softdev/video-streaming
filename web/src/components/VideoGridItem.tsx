@@ -1,19 +1,9 @@
 import { useEffect, useRef, useState } from 'react'
 import {UtilsService} from '../utils/utils'
+import {Video} from '../type/video'
 
 type TVideoGridItemProps = {
-    id: string
-    title: string
-    channel: {
-        id: string
-        name: string
-        profileUrl: string
-    },
-    views: number
-    postedAt: Date
-    duration: number
-    thumbnailUrl: string
-    videoUrl: string
+    video: Video
 }
 
 const VIEW_FORMATTER = new Intl.NumberFormat(undefined, { notation: "compact" })
@@ -35,10 +25,10 @@ const VideoGridItem = (props: TVideoGridItemProps) => {
 
     return (
         <div className="flex flex-col gap-2">
-            <a href={`/watch?v=${props.id}`} className="relative aspect-video">
-                <img src={props.thumbnailUrl} alt="Video" className="block w-full h-full object-cover rounded-xl" />
+            <div className="relative aspect-video">
+                <img src={props.video.thumbnailUrl} alt="Video" className="block w-full h-full object-cover rounded-xl" />
                 <div className="absolute bottom-1 right-1 bg-secondary-dark text-secondary text-sm px-0.5 rounded">
-                    {UtilsService.formatDuration(props.duration)}
+                    {UtilsService.formatDuration(props.video.duration)}
                 </div>
                 <video
                 className={`block h-full object-cover absolute inset-0 transition-opacity duration-200 ${
@@ -47,22 +37,22 @@ const VideoGridItem = (props: TVideoGridItemProps) => {
                 ref={videoRef}
                 muted
                 playsInline
-                src={props.videoUrl}
+                src={props.video.videoUrl}
                 />
-            </a>
+            </div>
             <div className="flex gap-2">
-                <a href={`/@${props.channel.id}`} className="flex-shrink-0">
-                <img className="w-12 h-12 rounded-full" src={props.channel.profileUrl} />
-                </a>
+                <div className="flex-shrink-0">
+                    <img className="w-12 h-12 rounded-full" src={props.video.channel.profileUrl} />
+                </div>
                 <div className="flex flex-col">
-                <a href={`/watch?v=${props.id}`} className="font-bold">
-                    {props.title}
-                </a>
-                <a href={`/@${props.channel.id}`} className="text-secondary-text text-sm">
-                    {props.channel.name}
-                </a>
+                <p className="font-bold">
+                    {props.video.title}
+                </p>
+                <p className="text-secondary-text text-sm">
+                    {props.video.channel.name}
+                </p>
                 <div className="text-secondary-text text-sm">
-                    {VIEW_FORMATTER.format(props.views)} Views • {UtilsService.formatTimeAgo(props.postedAt)}
+                    {VIEW_FORMATTER.format(props.video.views)} Views • {UtilsService.formatTimeAgo(new Date(props.video.postedAt))}
                 </div>
                 </div>
             </div>

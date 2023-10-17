@@ -3,6 +3,8 @@ from fastapi import FastAPI, File, Form, UploadFile, HTTPException
 import os
 from app.application.video_service import VideoService
 from pydantic import BaseModel, Json
+from starlette.responses import FileResponse
+from fastapi.middleware.cors import CORSMiddleware
 
 class ChannelModel(BaseModel):
     id: str
@@ -21,7 +23,15 @@ class VideoCreate(BaseModel):
 
 app = FastAPI()
 
-VIDEO_DIRECTORY = "./videos"
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # This allows all origins. Adjust this in a real-world scenario!
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+VIDEO_DIRECTORY = "./videos_storage"
 
 @app.post("/upload/")
 async def upload_video(
@@ -51,6 +61,14 @@ async def get_all_videos():
         return [video.__dict__ for video in videos]
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error retrieving videos: {e}")
+    
+@app.get("/videos/watch/{filename}")
+async def stream_video(filename: str):
+    try:
+        filepath = os.path.join(VIDEO_DIRECTORY, filename)
+        return FileResponse(filepath, media_type="video/mp4", method="GET")
+    except Exception as e:
+        raise HTTPException(status_code=404, detail=f"File not found: {filename}")
     
 @app.get("/videos/{video_id}")
 async def get_video_by_id(video_id: str):
